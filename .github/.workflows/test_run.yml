@@ -1,0 +1,20 @@
+name: "Test Setup"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Setup Python"
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - name: "Install Tox"
+        run: pip install tox
+      - name: "Run Tox Check"
+        run: tox -e lint
+        
