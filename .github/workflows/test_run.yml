@@ -16,5 +16,7 @@ jobs:
       - name: "Install Tox"
         run: pip install tox
       - name: "Run Tox Check"
-        run: tox -e lint
+        run: |
+          tox
+          tox -e lint
         
