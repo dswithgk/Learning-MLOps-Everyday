@@ -14,9 +14,12 @@ jobs:
         with:
           python-version: '3.x'
       - name: "Install Tox"
-        run: pip install tox
+        run: |
+          pip install tox
+          pip install flake8
       - name: "Run Tox Check"
         run: |
           tox
+          ls
           tox -e lint
         
