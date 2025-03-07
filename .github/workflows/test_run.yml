@@ -18,8 +18,7 @@ jobs:
       - name: "Install Tox"
         run: |
           pip install tox
-          pip install flake8
       - name: "Run Tox Check"
         run: |
-          tox -e lint
+          tox -e checks
         
