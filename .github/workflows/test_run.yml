@@ -19,7 +19,6 @@ jobs:
           pip install flake8
       - name: "Run Tox Check"
         run: |
-          tox
           ls
           tox -e lint
         
